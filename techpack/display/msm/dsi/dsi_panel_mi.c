@@ -4200,17 +4200,6 @@ int dsi_panel_set_disp_param(struct dsi_panel *panel, u32 param)
 				if (panel->power_mode == SDE_MODE_DPMS_LP1 || panel->power_mode == SDE_MODE_DPMS_LP2) {
 					switch (mi_cfg->doze_brightness_state) {
 					case DOZE_BRIGHTNESS_HBM:
-<<<<<<< HEAD
-						mi_dsi_update_lhbm_cmd_87reg(panel, DSI_CMD_SET_MI_FOD_LHBM_WHITE_1000NIT, mi_cfg->doze_hbm_dbv_level);
-						pr_debug("DSI_CMD_SET_MI_FOD_LHBM_WHITE_1000NIT in doze_hbm_dbv_level\n");
-						break;
-					case DOZE_BRIGHTNESS_LBM:
-						mi_dsi_update_lhbm_cmd_87reg(panel, DSI_CMD_SET_MI_FOD_LHBM_WHITE_1000NIT, mi_cfg->doze_lbm_dbv_level);
-						pr_debug("DSI_CMD_SET_MI_FOD_LHBM_WHITE_1000NIT in doze_lbm_dbv_level\n");
-						break;
-					default:
-						pr_debug("DSI_CMD_SET_MI_FOD_LHBM_WHITE_1000NIT defaults\n");
-=======
 						mi_dsi_update_lhbm_cmd_87reg(panel, DSI_CMD_SET_MI_FOD_LHBM_WHITE_110NIT, mi_cfg->doze_hbm_dbv_level);
 						pr_info("DSI_CMD_SET_MI_FOD_LHBM_WHITE_110NIT in doze_hbm_dbv_level\n");
 						break;
@@ -4220,7 +4209,6 @@ int dsi_panel_set_disp_param(struct dsi_panel *panel, u32 param)
 						break;
 					default:
 						pr_info("DSI_CMD_SET_MI_FOD_LHBM_WHITE_110NIT defaults\n");
->>>>>>> 8c990e2cde7f (techpack: display: Import xiaomi modifications from pipa-t-oss)
 						break;
 					}
 				}
