@@ -216,9 +216,9 @@ out:
 	return count;
 }
 
-static const struct file_operations bl_selftest_fops = {
-	.read = bl_selftest_read,
-	.write = bl_selftest_write,
+static const struct proc_ops bl_selftest_fops = {
+        .proc_read = bl_selftest_read,
+        .proc_write = bl_selftest_write,
 };
 
 static int ktz8866_backlight_update_status(struct backlight_device *backlight)
