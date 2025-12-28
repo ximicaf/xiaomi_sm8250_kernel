@@ -948,7 +948,7 @@ static int cp_flash2_charge(unsigned int port)
 	return 0;
 }
 
-const unsigned char *pm_state_str[] = {
+static const unsigned char *pm_state_str[] = {
 	"CP_STATE_ENTRY",
 	"CP_STATE_DISCONNECT",
 	"CP_STATE_SW_ENTRY",
@@ -977,7 +977,7 @@ static void cp_move_state(pm_sm_state_t state)
 	pm_state.state = state;
 }
 
-void cp_statemachine(unsigned int port)
+static void cp_statemachine(unsigned int port)
 {
 	int ret;
 	static int tune_vbus_retry, tune_vbus_count, retry_enable_bq_count;
